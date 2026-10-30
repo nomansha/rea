@@ -96,7 +96,7 @@ const loadSource = (url, context, nextLoad) => {
     ...loaded,
     format,
     source: nodeModule.stripTypeScriptTypes(source, {
-      mode: "strip",
+      mode: "transform",
       sourceMap: true,
       sourceUrl: url,
     }),
