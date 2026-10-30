@@ -16,8 +16,9 @@ constructor(
     message: string,
     metadata: SkillManifestMetadata,
 ) {
+    super(message); 
     this.metadata = metadata;
-    super(message);
+    /*super(message);*/
   }
 }
 
