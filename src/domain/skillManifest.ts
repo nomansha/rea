@@ -10,10 +10,13 @@ export interface SkillManifestMetadata {
 
 export class SkillManifestMetadataError extends Error {
   readonly _tag = "SkillManifestMetadataError" as const;
-  constructor(
+metadata: SkillManifestMetadata;
+
+constructor(
     message: string,
-    readonly metadata: SkillManifestMetadata,
-  ) {
+    metadata: SkillManifestMetadata,
+) {
+    this.metadata = metadata;
     super(message);
   }
 }
